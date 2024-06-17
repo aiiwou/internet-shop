@@ -1,5 +1,5 @@
 .wrapper {
-    padding: 10px;
+    padding: 25px;
     width: 500px;
     display: flex;
     flex-direction: column;
@@ -7,4 +7,5 @@
     justify-content: center;
     align-items: start;
     background: #fff;
+    border-radius: 10px;
 }
