@@ -56,7 +56,7 @@ const SelectBlock: FC<SelectBlockProps> = (props) => {
         name="count"
         id="count"
         value={quantity}
-        onChange={(e) => setQuantity(parseInt(e.target.value || "0"))}
+        onChange={(e) => setQuantity(parseInt(e.target.value))}
       />
       <button onClick={() => AddToCart()}>Добавить в корзину</button>
     </div>
