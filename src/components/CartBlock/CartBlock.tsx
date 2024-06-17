@@ -4,6 +4,7 @@ import styles from "./CartBlock.module.css";
 type CartBlockProps = {
   cart: ICartProduct[];
 };
+
 const CartBlock: FC<CartBlockProps> = (props) => {
   const { cart } = props;
   const [totalPrice, setTotalPrice] = useState(0);
@@ -22,10 +23,10 @@ const CartBlock: FC<CartBlockProps> = (props) => {
     <div className={styles.wrapper}>
       {cart.map((pr) => (
         <p key={pr.product.id}>
-          {pr.product.title} -- {pr.quantity} шт -- {pr.quantity * pr.product.price} рублей
+          {pr.product.title} -- {pr.quantity} шт -- {(pr.quantity * pr.product.price).toFixed(2)} рублей
         </p>
       ))}
-      {cart.length ? <p>Всего: {totalPrice} рублей</p> : <></>}
+      {cart.length ? <p>Всего: {totalPrice} рублей</p> : <p>Еще ничего нет</p>}
     </div>
   );
 };

@@ -1,4 +1,9 @@
+html {
+  font-family: 'Open Sans';
+}
+
 body {
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6,6 +11,7 @@ body {
 }
 
 .container {
+  margin-bottom: 20px;
   max-width: 1200px;
   display: flex;
   flex-direction: row;
