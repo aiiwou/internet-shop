@@ -22,7 +22,7 @@ const SelectBlock: FC<SelectBlockProps> = (props) => {
   const AddToCart = () => {
     const CartProductItem = products.find((el) => el.id == currentProductId);
 
-    if (CartProductItem && quantity != 0) {
+    if (CartProductItem && quantity) {
       const currenProduct = cart.find((el) => el.product.id == currentProductId);
 
       if (currenProduct) {
