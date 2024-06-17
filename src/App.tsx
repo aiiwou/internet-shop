@@ -25,8 +25,7 @@ function App() {
   const save = () => {
     const orderCart = createOrderProduct();
     if (orderCart) {
-      axios
-        .post("https://dev-su.eda1.ru/test_task/save.php", orderCart)
+      axios.post("https://dev-su.eda1.ru/test_task/save.php", orderCart)
         .then((res) => {
           if (res.status == 200) {
             setOpen(true);
